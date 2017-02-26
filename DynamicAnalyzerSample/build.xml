@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+	<!-- 
+     <project basedir="." default="build" name="DynamicAnalyzerSample">
+     -->
+	<project basedir="." default="build" name="DynamicAnalyzerSample">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="D:/Backup/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="IBM Bluemix Runtime [IBM Bluemix Runtime].libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}plugins/javax.servlet_3.1.0.v201410161800.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/javax.servlet.jsp_2.2.0.v201112011158.jar"/>
+    </path>
+    <path id="Web App Libraries.libraryclasspath"/>
+    <path id="EAR Libraries.libraryclasspath"/>
+    <path id="DynamicAnalyzerSample.classpath">
+        <pathelement location="build/classes"/>
+        <path refid="IBM Bluemix Runtime [IBM Bluemix Runtime].libraryclasspath"/>
+        <path refid="Web App Libraries.libraryclasspath"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="build/classes"/>
+        <copy includeemptydirs="false" todir="build/classes">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="build/classes">
+            <fileset dir=".apt_generated">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    	<war destfile="C:\DynamicAnalyzerSample.war"
+    	        basedir="WebContent"
+    	        needxmlfile="false">
+    	</war>
+    </target>
+    <target name="clean">
+        <delete dir="build/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="build/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <src path=".apt_generated"/>
+            <classpath refid="DynamicAnalyzerSample.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+</project>

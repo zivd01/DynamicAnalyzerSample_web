@@ -1,0 +1,210 @@
+body{
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Trebuchet MS;
+}
+
+input:-webkit-autofill {
+    color: #1D3E6B !important;
+}
+
+.backgroundImage {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity : 0.9;
+    z-index: -1;
+   	background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+.transitionEffect {
+	transition: all 2s;
+}
+
+.invisible {
+	opacity: 0;
+}
+
+
+#logoutButton {
+    position: absolute;
+    right: 4%;
+    top: 5%;
+    font-weight: 100;
+    font-size: 20px;
+    color: White;
+    cursor: pointer;
+}
+
+#userWelcomeMessage {
+    position: absolute;
+    left: 2%;
+    top: 5%;
+    font-weight: 100;
+    font-size: 20px;
+    color: White;
+}
+
+
+/* Login Container */
+.loginContainer {
+    background-color: rgba(203, 208, 223, 0.7);
+    border-radius: 10px;
+    position: absolute;
+    top: 15%;
+    Left: 10%;
+    width: 550px;
+    height: 380px;
+    padding: 0 0 0 40px;
+}
+
+
+.loginContainer h1 {
+    font-size: 35px;
+    padding-bottom: 20px;
+    font-family: "Tahoma", Serif;
+    font-weight: 100;
+    color: #666666;
+}
+
+.loginContainer label {
+    display: block;
+    position: relative;
+    font-size: 20px;
+    color: black;
+    margin: 0 0 5px 0;
+    color: #666666;
+}
+
+.loginContainer .input {
+    display: block;
+    margin: 0 10px 30px 5px;
+    background: white;
+    border: 0;
+    width: 460px;
+    height: 25px;
+    padding: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius:10px;
+    color: black;
+    text-decoration: none;
+    font-size: 1em;  
+}
+
+.loginContainer .input:focus {
+    outline: none !important;
+}
+
+
+.loginContainer .button{
+    background-color: #00649D;
+    border: 0;
+    border-radius:10px;
+    height: 38px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    opacity: 1.0;
+    cursor: pointer;
+    float: right;
+    margin: 0 45px 0 0;
+    width: 110px;
+    height: 45px;
+}
+
+/* Login Container */
+
+
+
+/* Echo Container */
+@media screen and (min-width: 1200px) {
+	.echoContainer{
+	    position: absolute;
+	    top: 20%;
+	    Left: 25%;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.echoContainer{
+	    position: absolute;
+	    top: 20%;
+	    Left: 10%;
+	}
+}
+
+
+.echoContainer h1 {
+    font-weight: 100;
+    font-size: 48px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    color: White;
+}
+
+
+.echoContainer .answerLbl{
+    font-weight: 100;
+    color: white;
+    font-size: 20px;
+    font-color: White;
+    margin-top: 40px;
+}
+
+.echoContainer .answer{
+    font-weight: 100;
+    color: white;
+    font-size: 60px;
+    padding-bottom: 20px;
+    font-color: White;
+    margin-top: 10px;
+}
+
+.echoContainer .input {
+    /*background-color: #fff;*/
+    margin: 0 0 10px 0;
+    background:rgba(255,255,255,0.2);
+    border: 0;
+    width: 460px;
+    height: 25px;
+    padding: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius:5px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    margin-right: 3px;
+}
+
+.echoContainer .submissionButton{
+    background-color: #fff;
+    border: 0;
+    padding: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius:5px;
+    height: 38px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.echoContainer .submissionButton:hover {
+    opacity: 0.8;
+    transition: opacity 0.25s;
+}
+/* Echo Container */
+
+
+
+
